@@ -164,7 +164,7 @@ $(document).on('click', '#source', function() {
                 text: "問題" + i
             });
             let cor_dom = null
-            if (finishded[i][2] == 1) {
+            if (finishded[i - 1][2] == 1) {
                 cor_dom = $("<b>", {
                     text: "　〇",
                     css: {"color": "red"}
