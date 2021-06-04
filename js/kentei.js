@@ -8,7 +8,7 @@ const q_num = 5 //問題数設定
 
 //問題データロード
 const load_data = () => {
-    const url = location.protocol + "//" + location.host + "/kentei/data.json"
+    const url = location.protocol + "//" + location.host + "miko_kentei/kentei/data.json"
     fetch(url)
         .then(function (response) {
             return response.json();
@@ -111,7 +111,7 @@ const load_next = () => {
 
         if (data[difficulty][question_selector][0].slice(-6) == "[音声問題]") {
             voice.preload = "auto";
-            voice.src = location.protocol + "//" + location.host + "/kentei/" + data[difficulty][question_selector][5]
+            voice.src = location.protocol + "//" + location.host + "miko_kentei/kentei/" + data[difficulty][question_selector][5]
             voice.load();
             button_dom = $("<button>", {
                 id: "play",
